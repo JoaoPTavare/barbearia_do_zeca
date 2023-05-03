@@ -25,6 +25,11 @@ public class Cliente {
     @colum (name="")
     private Integer nome;
 
+    @colum (name="")
+    private Integer nome;
+    
+    @colum (name="")
+    private Integer nome;
 
 
 
