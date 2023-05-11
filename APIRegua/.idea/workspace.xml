@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3eae51cc-1cd2-4f77-8dac-36b9b0412c35" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/nbactions.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/java/com/example/demo/ProjetoApiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/java/com/example/demo/controler/AgendamentoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/java/com/example/demo/controler/ClienteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/java/com/example/demo/controler/FuncionarioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/java/com/example/demo/model/Agendamento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/java/com/example/demo/model/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/java/com/example/demo/model/Funcionario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/java/com/example/demo/repository/AgendamentoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/java/com/example/demo/repository/ClienteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/java/com/example/demo/repository/FuncionarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/java/com/example/demo/service/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/java/com/example/demo/service/SwaggerConfiguracao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjetoAPI/src/test/java/com/example/demo/ProjetoApiApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/model/Cliente.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2PcLXW0JYLPSTTcZPDfXVwoSscU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/na_regua/APInaRegua",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3eae51cc-1cd2-4f77-8dac-36b9b0412c35" name="Changes" comment="" />
+      <created>1683751466313</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683751466313</updated>
+    </task>
+    <servers />
+  </component>
+</project>
