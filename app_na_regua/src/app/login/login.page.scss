@@ -1,7 +1,27 @@
-
 ion-button[type="submit"] {
   --ion-color-primary: #149529;
   --ion-color-primary-shade: #096919;
   border-radius: 20px;
+
 }
 
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container img {
+    margin-bottom: 5%;
+    margin-top: 10%;
+    max-width: 50%;
+  }
+  
