@@ -1,9 +1,43 @@
-.cabeçalho-conteudo{
 
+
+ion-button[type="submit"] {
+    --ion-color-primary: #92799d;
+    --ion-color-primary-shade: #92799d;
+    font-size: 20px;
+  }
+
+ion-button[type="rodape"] {
+    --ion-color-primary: #149529;
+    --ion-color-primary-shade: #149529;
+    --border-radius: 20px;
+  }
+
+ion-toolbar{
+    text-align: flex;
+    --background:#563751;
+    padding: 20px;
+  }
+ion-title{
+  font-size: 29px;
+  }
+
+ion-grid{
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
+ion-content{
+    --background: #382439;
+    --border-top-left-radius: 25px;
+    --border-top-right-radius: 25px;
 
-.corpo{
-    border-radius: 50%;
-    background: #382439;
+  }
 
-}
+
+  ion-content.radius{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+
+
+
