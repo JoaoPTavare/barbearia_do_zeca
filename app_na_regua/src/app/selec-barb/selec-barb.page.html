@@ -6,7 +6,14 @@
 
 <ion-content [fullscreen]="true">
 
+
+
   <ion-grid class="radius">
+    <ion-toolbar class="botao-voltar">
+      <ion-buttons slot="start">
+        <ion-back-button default-href="#"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
       <ion-row>
         <ion-button type="submit"> Matheus de Almeida</ion-button>
       </ion-row>
@@ -19,13 +26,16 @@
         <ion-button type="submit"> Jonathan Taveres</ion-button>
       </ion-row>
 
+
+      <ion-footer>
+        <ion-button type="rodape" expand="block" >Ir para datas!</ion-button>
+      </ion-footer>
       
   </ion-grid>
 
 
+
 </ion-content>
-<ion-footer>
-  <ion-button type="rodape" expand="block">Ir para datas!</ion-button>
-</ion-footer>
+
 
 
