@@ -21,6 +21,11 @@ public interface ServicoService {
     /*Optional evita exceções como ponteiros nulos por exemplo */
     public Optional<Servico> getByIdServico(Integer codServico);
     
+    
+    
+    
+    
+    
     public Servico atualizaServico(Servico servico);
     
     public void deleteByIdServico(Integer codServico);  

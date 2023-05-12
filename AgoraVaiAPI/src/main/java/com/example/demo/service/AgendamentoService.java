@@ -22,7 +22,7 @@ public interface AgendamentoService {
     
     public Optional<Agendamento> getByIdAgendamento(Integer codAgendamento);
     
-    public Cliente atualizaAgendamento(Agendamento agendamento);
+    public Agendamento atualizaAgendamento(Agendamento agendamento);
     
     public void deleteByIdAgendamento(Integer codAgendamento);   
     
