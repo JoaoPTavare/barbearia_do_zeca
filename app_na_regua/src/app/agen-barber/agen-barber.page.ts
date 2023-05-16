@@ -10,7 +10,7 @@ import { IonicModule } from '@ionic/angular';
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule]
 })
-export class AgenBarberPage implements OnInit {
+export class AgenBarberPage{
 
   constructor() { }
 

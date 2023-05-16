@@ -1,0 +1,29 @@
+ion-toolbar{
+    text-align: flex;
+    background-color: transparent;
+    --background: transparent;
+    padding: 20px;
+  }
+
+  ion-grid{
+    background: #382439;
+    border-radius:20px 20px 0px 0px;
+    height: 100%;
+  }
+  ion-button[type="rodape"] {
+    --ion-color-primary: #149529;
+    --ion-color-primary-shade: #149529;
+    --border-radius: 20px;
+    background: #382439;
+    margin-top: 20%;
+  }
+  ion-datetime{
+    border-radius: 15px;
+    background: #92799D;
+    margin-top: 5%;
+    margin-left: 20%;
+  }
+
+.nome-barber{
+    margin-top: 5%;
+}
