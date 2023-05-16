@@ -13,7 +13,8 @@ export const routes: Routes = [
   {
     path: 'dados',
     loadComponent: () => import('./dados/dados.page').then( m => m.DadosPage)
-  },  {
+  },
+  {
     path: 'login',
     loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
   },
