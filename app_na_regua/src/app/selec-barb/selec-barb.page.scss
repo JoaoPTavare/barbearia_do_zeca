@@ -7,7 +7,8 @@ ion-button[type="submit"] {
     --border-radius: 20px;
     width: 400px;
     top: 50px;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
+    margin-left: 5em;
     --padding-bottom: 27px;
     --padding-top: 27px;
     --padding-left: 60px;
@@ -15,6 +16,7 @@ ion-button[type="submit"] {
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
 
 ion-button[type="rodape"] {
@@ -36,18 +38,18 @@ ion-button[type="rodape"] {
       --ion-color-primary-shade: #FFFFFF;
     
   }
-  .break{
-    word-break: break-all;
-  }
+
 
 ion-toolbar{
     text-align: flex;
-    --background:#563751;
+    background-color: transparent;
+    --background: transparent;
     padding: 20px;
-    
+    text-align: center;
   }
 ion-title{
-  font-size: 0.9em;
+  font-size: 2em;
+
   }
 
   .radius{
