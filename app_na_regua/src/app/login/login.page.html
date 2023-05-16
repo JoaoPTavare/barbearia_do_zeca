@@ -3,20 +3,29 @@
   <div class="container">
     <img src="assets/04-3.png" alt="Imagem" />
   </div>
+
+  <div class="na-regua">
+    <p>Na régua!</p>  
+  </div>
+
   <form>
     <ion-list>
       <ion-item>
-        <ion-label position="floating">E-mail</ion-label>
-        <ion-input type="email" name="email" id="campo-email"></ion-input>
+        <ion-label position="stacked">E-mail</ion-label>
+        <ion-input type="email" name="email" placeholder="exemplo@exemplo.com" ></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">Senha</ion-label>
-        <ion-input type="password" name="password"></ion-input>
+        <ion-label position="stacked">Senha</ion-label>
+        <ion-input type="password" name="password" placeholder="********"></ion-input>
       </ion-item>
     </ion-list>
-
-    <ion-button class = "login" type="submit" expand="block">Entrar</ion-button>
+    <ion-col>
+       <p>Não tem cadastro?</p>
+       <ion-router-link routerLink="/cadastro">Cadastre-se</ion-router-link>
+    </ion-col>
+    
   </form>
+      <ion-button class = "login" type="submit" expand="block">Entrar</ion-button>
 </ion-content>
 
