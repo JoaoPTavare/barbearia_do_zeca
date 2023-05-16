@@ -12,57 +12,48 @@ ion-button[type="submit"] {
   ion-input[type="text"]{
     background-color: #65536c;
     border-radius: 20px;
-    border: 1px solid #65536c;
-    padding: 10px;
+    border: 8px solid #65536c;
     margin-top: 2%;
     width: 300px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
   ion-input[type="email"]{
     background-color: #65536c;
     border-radius: 20px;
-    border: 1px solid #65536c;
-    padding: 10px;
+    border: 8px solid #65536c;
     margin-top: 2%;
     width: 300px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
   ion-input[type="password"]{
     background-color: #65536c;
     border-radius: 20px;
-    border: 1px solid #65536c;
-    padding: 10px;
+    border: 8px solid #65536c;
     margin-top: 2%;
     width: 300px;
-    height: 50px;
   }
   
-  ion-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      
-    }
-  
-    .container{
+  .logo{
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
+  }
     
-    .container img {
+  .logo img {
       margin-bottom: 15%;
       margin-top: 15%;
       max-width: 55%;
-    }
-    
+  }
+
+.faz-log {
+  font-size: 12px;
+  text-align: right;
+  margin-inline-end: 12%;
+  margin-top: -10px;
+}
+
+.cadastro {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}

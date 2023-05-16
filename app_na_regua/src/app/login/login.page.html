@@ -1,6 +1,6 @@
 
-<ion-content scrollEvents=false class="ion-padding">
-  <div class="container">
+<ion-content scroll-y="false" class="ion-padding">
+  <div class="logo">
     <img src="assets/04-3.png" alt="Imagem" />
   </div>
 
@@ -8,6 +8,7 @@
     <p>Na régua!</p>  
   </div>
 
+  <div class ="login">
   <form>
     <ion-list>
       <ion-item>
@@ -24,12 +25,16 @@
         </ion-input>
     </ion-item>
     </ion-list>
-    <ion-col>
-       <p>Não tem cadastro?</p>
-       <ion-router-link routerLink="/cadastro">Cadastre-se</ion-router-link>
-    </ion-col>
-    
   </form>
-      <ion-button class = "login" type="submit" expand="block">Entrar</ion-button>
+  </div>
+  
+  <div class ="cadastro">
+    <ion-col>
+       <p>Não tem conta? <ion-router-link routerLink="/cadastro">Cadastre-se</ion-router-link></p>
+    </ion-col>
+  </div>
+  <div class = "login">
+  <ion-button class = "login" type="submit" expand="block">Entrar</ion-button>
+</div>
 </ion-content>
 
