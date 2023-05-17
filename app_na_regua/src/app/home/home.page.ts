@@ -9,5 +9,10 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class HomePage {
+
+  public barbeariaLogo=[ {imagem:'img-01.jpg'} ];
+ 
+  public barberImg = '../../assets/imagens/';
+ 
   constructor() {}
 }
