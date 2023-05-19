@@ -14,12 +14,13 @@ ion-toolbar{
     border-radius:20px 20px 0px 0px;
     height: 100%;
   }
-  ion-button[type="rodape"] {
+  ion-button[type="submit"] {
     --ion-color-primary: #149529;
-    --ion-color-primary-shade: #149529;
-    --border-radius: 15px;
-    background: #382439;
-    margin-top: 20%;
+    --ion-color-primary-shade: #096919;
+    --border-radius: 20px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
   }
   ion-datetime{
     border-radius: 15px;
@@ -30,18 +31,16 @@ ion-toolbar{
     --placeholder-color: #FFFFFF; /* Cor do texto de espaço reservado */
     --ion-color-primary: #000000; /* Cor principal do seletor */
     --ion-color-primary-contrast: #FFFFFF; /* Cor do texto contrastante para a cor principal */
-    --ion-color-primary-shade: #92799D; /* Cor do sombreado da cor principal */
+    --ion-color-primary-shade: #FFFFFF; /* Cor do sombreado da cor principal */
     --ion-color-placeholder: #FFFFFF;
   }
 
 .nome-barber{
     font-family: 'Fonte', sans-serif;
-    
+    margin-top: 2%;
 }
 
 .voltar{
   font-size: 24px;
 }
-.custom-datetime::after{
-  color:#FFFFFF;
-}
+
