@@ -7,7 +7,6 @@ ion-toolbar{
 
   .titulo{
     font-family: 'Fonte', sans-serif;
-    font-size: 1.5em;
   }
 
   ion-grid{
@@ -24,20 +23,25 @@ ion-toolbar{
   }
   ion-datetime{
     border-radius: 15px;
-    background: #92799D;
     margin-left: auto;
     margin-right: auto;
+    background: #92799D;
+    --color: #FFFFFF; /* Cor do texto */
+    --placeholder-color: #FFFFFF; /* Cor do texto de espaço reservado */
+    --ion-color-primary: #000000; /* Cor principal do seletor */
+    --ion-color-primary-contrast: #FFFFFF; /* Cor do texto contrastante para a cor principal */
+    --ion-color-primary-shade: #92799D; /* Cor do sombreado da cor principal */
+    --ion-color-placeholder: #FFFFFF;
   }
 
-  .botao-voltar{
-    background-color: transparent;
-    --background: transparent;
-    --ion-color-primary: #FFFFFF;
-    --ion-color-primary-shade: #FFFFFF;
-}
 .nome-barber{
     font-family: 'Fonte', sans-serif;
-    font-size: 1.5em;
-    margin-left: auto;
-    margin-right: auto;
+    
+}
+
+.voltar{
+  font-size: 24px;
+}
+.custom-datetime::after{
+  color:#FFFFFF;
 }
