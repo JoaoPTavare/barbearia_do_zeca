@@ -5,6 +5,11 @@ ion-toolbar{
     padding: 20px;
   }
 
+  .titulo{
+    font-family: 'Fonte', sans-serif;
+    font-size: 1.5em;
+  }
+
   ion-grid{
     background: #382439;
     border-radius:20px 20px 0px 0px;
@@ -13,17 +18,26 @@ ion-toolbar{
   ion-button[type="rodape"] {
     --ion-color-primary: #149529;
     --ion-color-primary-shade: #149529;
-    --border-radius: 20px;
+    --border-radius: 15px;
     background: #382439;
     margin-top: 20%;
   }
   ion-datetime{
     border-radius: 15px;
     background: #92799D;
-    margin-top: 5%;
-    margin-left: 20%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
+  .botao-voltar{
+    background-color: transparent;
+    --background: transparent;
+    --ion-color-primary: #FFFFFF;
+    --ion-color-primary-shade: #FFFFFF;
+}
 .nome-barber{
-    margin-top: 5%;
+    font-family: 'Fonte', sans-serif;
+    font-size: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
 }
