@@ -12,5 +12,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author JOÃO
  */
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
-    
+
+
 }

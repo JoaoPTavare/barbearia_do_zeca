@@ -20,6 +20,9 @@ import java.util.Optional;
  *
  * @author JOÃO
  */
+@RestController
+@RequestMapping("/api")
+
 public class ServicoController {
 
 

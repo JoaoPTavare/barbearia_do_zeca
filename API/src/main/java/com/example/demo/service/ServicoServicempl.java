@@ -5,39 +5,42 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Servico;
+import com.example.demo.repository.ServicoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Optional;
 
-/**
- *
- * @author JOÃO
- */
+
 public class ServicoServicempl  implements ServicoService{
+
+    @Autowired
+    private ServicoRepository repository;
 
 
     @Override
     public Servico salvaServico(Servico servico) {
-        return null;
+        return repository.save(servico);
     }
 
     @Override
     public List<Servico> listaServico() {
-        return null;
+        return repository.findAll();
     }
 
     @Override
     public Optional<Servico> getByIdServico(Integer codServico) {
-        return Optional.empty();
+        return repository.findById(codServico);
     }
 
     @Override
     public Servico atualizaServico(Servico servico) {
-        return null;
+
+        return repository.save(servico);
     }
 
     @Override
     public void deleteByIdServico(Integer codServico) {
-
+        repository.deleteById(codServico);
     }
 }

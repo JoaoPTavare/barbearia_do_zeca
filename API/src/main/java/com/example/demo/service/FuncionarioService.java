@@ -14,6 +14,7 @@ import java.util.Optional;
  * @author JOÃO
  */
 public interface FuncionarioService {
+
     public Funcionario salvaFuncionario(Funcionario funcionario);
 
     public List<Funcionario> listaFuncionario();

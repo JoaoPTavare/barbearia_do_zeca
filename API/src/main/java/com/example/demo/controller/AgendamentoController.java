@@ -6,6 +6,8 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Agendamento;
 import com.example.demo.service.AgendamentoService;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,14 +16,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-/**
- *
- * @author JOÃO
- */
+ 
+@RestController
+@RequestMapping("/api")
 public class AgendamentoController {
 
-    @Autowired
+     @Autowired
     private AgendamentoService agendamentoService;
+
+
 
     @GetMapping("/agendamento")
     public ResponseEntity<List<Agendamento>> listaAgendamento() {
@@ -51,7 +54,7 @@ public class AgendamentoController {
     @DeleteMapping("agendamento/{codAgendamento}")
     public ResponseEntity<String> deleteByIdAgendamento(@PathVariable Integer codAgendamento){
         agendamentoService.deleteByIdAgendamento(codAgendamento);
-        return ResponseEntity.status(HttpStatus.OK).body("Agendamento revogado com sucesso!");
+        return ResponseEntity.status(HttpStatus.OK).body("Agendamento cancelado");
     }
 
 

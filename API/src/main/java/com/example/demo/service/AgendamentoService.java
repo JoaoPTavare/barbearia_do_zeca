@@ -5,7 +5,7 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Agendamento;
-import com.example.demo.model.Cliente;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -20,13 +20,12 @@ public interface AgendamentoService {
 
     public List<Agendamento> listaAgendamento();
 
-    /*Optional evita exceções como ponteiros nulos por exemplo */
+
     public Optional<Agendamento> getByIdAgendamento(Integer codAgendamento);
 
     public Agendamento atualizaAgendamento(Agendamento agendamento);
 
     public void deleteByIdAgendamento(Integer codAgendamento);
-
 
 
 }

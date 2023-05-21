@@ -21,7 +21,7 @@ public interface ClienteService {
 
     public List<Cliente> listaClientes();
 
-    /*Optional evita exceções como ponteiros nulos por exemplo */
+
     public Optional<Cliente> getByIdCliente(Integer codCliente);
 
     public Cliente atualizaCliente(Cliente cliente);

@@ -12,5 +12,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author JOÃO
  */
 public interface FuncionarioRepository extends JpaRepository<Funcionario, Integer> {
+ 
+
     
 }

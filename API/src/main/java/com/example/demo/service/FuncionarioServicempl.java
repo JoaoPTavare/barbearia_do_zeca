@@ -5,7 +5,8 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Funcionario;
-
+import com.example.demo.repository.FuncionarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,30 +14,40 @@ import java.util.Optional;
  *
  * @author JOÃO
  */
-public class FuncionarioServicempl implements  FuncionarioService{
+
+
+
+public class FuncionarioServicempl implements FuncionarioService{
+
+    @Autowired
+    private FuncionarioRepository funcionarioService;
+
 
     @Override
     public Funcionario salvaFuncionario(Funcionario funcionario) {
-        return null;
+        return funcionarioService.save(funcionario);
     }
+
+
+
 
     @Override
     public List<Funcionario> listaFuncionario() {
-        return null;
+        return funcionarioService.findAll();
     }
 
     @Override
     public Optional<Funcionario> getByIdFuncionario(Integer codFuncionario) {
-        return Optional.empty();
+        return funcionarioService.findById(codFuncionario);
     }
 
     @Override
     public Funcionario atualizaFuncionario(Funcionario funcionario) {
-        return null;
+        return funcionarioService.save(funcionario);
     }
 
     @Override
     public void deleteByIdFuncionario(Integer codFuncionario) {
-
+        funcionarioService.deleteById(codFuncionario);
     }
 }

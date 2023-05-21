@@ -5,6 +5,8 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Agendamento;
+import com.example.demo.repository.AgendamentoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,29 +17,34 @@ import java.util.Optional;
  */
 public class AgendamentoServicempl  implements AgendamentoService{
 
+    @Autowired
+    private AgendamentoRepository repository;
+
 
     @Override
     public Agendamento salvaAgendamento(Agendamento agendamento) {
-        return null;
+        return repository.save(agendamento);
     }
 
     @Override
     public List<Agendamento> listaAgendamento() {
-        return null;
+        return repository.findAll();
     }
 
     @Override
     public Optional<Agendamento> getByIdAgendamento(Integer codAgendamento) {
-        return Optional.empty();
+        return repository.findById(codAgendamento);
     }
 
     @Override
     public Agendamento atualizaAgendamento(Agendamento agendamento) {
-        return null;
+        return repository.save(agendamento);
     }
 
     @Override
     public void deleteByIdAgendamento(Integer codAgendamento) {
-
+       repository.deleteById(codAgendamento);
     }
+
+
 }
