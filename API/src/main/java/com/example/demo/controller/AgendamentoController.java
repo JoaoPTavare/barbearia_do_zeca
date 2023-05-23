@@ -50,7 +50,7 @@ public class AgendamentoController {
         return ResponseEntity.status(HttpStatus.OK).body(agendamentoService.atualizaAgendamento(agendamento));
     }
 
-
+ 
     @DeleteMapping("agendamento/{codAgendamento}")
     public ResponseEntity<String> deleteByIdAgendamento(@PathVariable Integer codAgendamento){
         agendamentoService.deleteByIdAgendamento(codAgendamento);
