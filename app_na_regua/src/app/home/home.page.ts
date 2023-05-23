@@ -10,7 +10,7 @@ import { IonicModule } from '@ionic/angular';
 })
 export class HomePage {
 
-  public barbeariaLogo=[ {imagem:'img-01.jpg'} ];
+  public barbeariaLogo=[ {imagem:'img01.jpg'} ];
  
   public barberImg = '../../assets/imagens/';
  

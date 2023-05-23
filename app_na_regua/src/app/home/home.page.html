@@ -1,25 +1,64 @@
+  <ion-header class="header-top">
+    <ion-grid>
+        <ion-row class="header-line">
+          <ion-col size="12">
+            <p class="strong">Home</p>
+          </ion-col>
+        </ion-row>
 
-  <ion-content [fullscreen]="true" class="ion-padding" >
-
-    <ion-grid class="radius">
+        <ion-row >
+          <ion-col size="12">
+            <img class="body-img" [src]="barberImg + 'img01.jpg'">
+          </ion-col>
+        </ion-row>
 
         <ion-row class="header-line">
-          <ion-title>  Home  </ion-title>
-        </ion-row>
-        
-        <ion-row class="body-img">
           <ion-col size="12">
-            <img src="assets/imagens/img.01.jpg">
+            <p class="strong">Serviços</p>
           </ion-col>
         </ion-row>
-
-        <ion-row>
-          <ion-col> 
-            <ion-button type="rodape" expand="block" >Ir para agendamento!</ion-button>
-          </ion-col>
-        </ion-row>
- 
     </ion-grid>
+
+  </ion-header>  
+  
+  <ion-content scroll-Y="false" class="body">
+
+    <ion-grid class="body-grid">    
+      
+    <ion-grid>
+       <ion-row>
+        <ion-col size="6">
+          <p class="body-line">Corte Padrão</p>
+        </ion-col>
+        
+        <ion-col size="6">
+          <ion-button class="body-button"> + </ion-button>
+        </ion-col>
+
+        <ion-col size="6">
+          <p class="body-line">Sobrancelha</p>
+        </ion-col>
+     
+        <ion-col size="6">
+          <ion-button class="body-button"> + </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <p class="body-line">Barba</p>
+        </ion-col>
+     
+        <ion-col size="6">
+          <ion-button class="body-button"> + </ion-button>
+        </ion-col>
+      </ion-row> 
+    </ion-grid>
+      
+      <ion-row>
+        <ion-col size="12"> 
+          <ion-button type="rodape" expand="block">Escolha seu barbeiro</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
   </ion-content>
  
   
