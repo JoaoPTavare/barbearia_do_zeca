@@ -15,7 +15,7 @@ import java.util.Optional;
  *
  * @author JOÃO
  */
-@Service
+
 public interface ServicoService {
     public Servico salvaServico(Servico servico);
 

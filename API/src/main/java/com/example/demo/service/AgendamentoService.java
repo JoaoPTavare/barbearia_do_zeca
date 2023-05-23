@@ -13,7 +13,7 @@ import java.util.Optional;
 
 
 
-    @Service
+
     public interface AgendamentoService {
 
     public Agendamento salvaAgendamento(Agendamento agendamento);
