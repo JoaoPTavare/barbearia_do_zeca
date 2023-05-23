@@ -11,39 +11,36 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.Optional;
 
-/**
- *
- * @author JOÃO
- */
+
 public class AgendamentoServicempl  implements AgendamentoService{
 
     @Autowired
-    private AgendamentoRepository repository;
+    private AgendamentoRepository agendamentoRepository;
 
 
     @Override
     public Agendamento salvaAgendamento(Agendamento agendamento) {
-        return repository.save(agendamento);
+        return agendamentoRepository.save(agendamento);
     }
 
     @Override
     public List<Agendamento> listaAgendamento() {
-        return repository.findAll();
+        return agendamentoRepository.findAll();
     }
 
     @Override
     public Optional<Agendamento> getByIdAgendamento(Integer codAgendamento) {
-        return repository.findById(codAgendamento);
+        return agendamentoRepository.findById(codAgendamento);
     }
 
     @Override
     public Agendamento atualizaAgendamento(Agendamento agendamento) {
-        return repository.save(agendamento);
+        return agendamentoRepository.save(agendamento);
     }
 
     @Override
     public void deleteByIdAgendamento(Integer codAgendamento) {
-       repository.deleteById(codAgendamento);
+        agendamentoRepository.deleteById(codAgendamento);
     }
 
 

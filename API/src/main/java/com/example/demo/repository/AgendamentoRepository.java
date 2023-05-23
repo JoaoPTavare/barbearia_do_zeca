@@ -7,10 +7,7 @@ package com.example.demo.repository;
 import com.example.demo.model.Agendamento;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-/**
- *
- * @author JOÃO
- */
+
 public interface AgendamentoRepository extends JpaRepository<Agendamento, Integer> {
     
 

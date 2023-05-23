@@ -6,6 +6,7 @@ package com.example.demo.service;
 
 import com.example.demo.model.Agendamento;
 import com.example.demo.model.Servico;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +15,7 @@ import java.util.Optional;
  *
  * @author JOÃO
  */
+@Service
 public interface ServicoService {
     public Servico salvaServico(Servico servico);
 

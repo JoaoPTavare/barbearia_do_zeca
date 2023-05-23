@@ -11,10 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-/**
- *
- * @author JOÃO
- */
+ 
 @Entity
 @Table(name= "Funcionario")
 public class Funcionario {

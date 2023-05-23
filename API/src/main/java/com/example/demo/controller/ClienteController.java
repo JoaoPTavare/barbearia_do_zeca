@@ -4,6 +4,7 @@
  */
 package com.example.demo.controller;
 
+
 import com.example.demo.model.Cliente;
 import com.example.demo.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,7 @@ public class ClienteController {
         return ResponseEntity.status(HttpStatus.OK).body(clienteService.atualizaCliente(cliente));
     }
 
-    /* @PathVariable vincula o parâmetro passado pelo método com a variável do path */
+
     @DeleteMapping("cliente/{codCliente}")
     public ResponseEntity<String> deleteByIdCliente(@PathVariable Integer codCliente){
         clienteService.deleteByIdCliente(codCliente);

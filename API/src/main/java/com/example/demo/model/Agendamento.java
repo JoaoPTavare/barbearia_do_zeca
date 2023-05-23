@@ -14,11 +14,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-/**
- *
- * @author JOÃO
- */
-
+ 
 @Entity
 @Table(name= "agendamento")
 public class Agendamento {

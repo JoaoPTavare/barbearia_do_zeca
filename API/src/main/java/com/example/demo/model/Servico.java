@@ -9,10 +9,7 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-/**
- *
- * @author JOÃO
- */
+ 
 @Entity
 @Table(name= "Servico")
 public class Servico {

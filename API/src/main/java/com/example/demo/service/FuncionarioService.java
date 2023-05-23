@@ -5,6 +5,7 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Funcionario;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,7 +13,7 @@ import java.util.Optional;
 /**
  *
  * @author JOÃO
- */
+ */@Service
 public interface FuncionarioService {
 
     public Funcionario salvaFuncionario(Funcionario funcionario);

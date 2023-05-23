@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
- 
+
 @RestController
 @RequestMapping("/api")
 public class AgendamentoController {
-
+    
      @Autowired
     private AgendamentoService agendamentoService;
 
@@ -29,7 +29,7 @@ public class AgendamentoController {
     @GetMapping("/agendamento")
     public ResponseEntity<List<Agendamento>> listaAgendamento() {
         return ResponseEntity.status(HttpStatus.OK).body(agendamentoService.listaAgendamento());
-    }
+}
 
     @GetMapping("agendamento/{codAgendamento}")
 

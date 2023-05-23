@@ -11,10 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-/**
- *
- * @author JOÃO
- */
+ 
 @Entity
 @Table(name= "cliente")
 public class Cliente {
@@ -51,6 +48,55 @@ public class Cliente {
         this.email = email;
         this.senha = senha;
         this.cpf = cpf;
+        this.fone = fone;
+    }
+
+
+    public Integer getCodCliente() {
+        return codCliente;
+    }
+
+    public void setCodCliente(Integer codCliente) {
+        this.codCliente = codCliente;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public int getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(int cpf) {
+        this.cpf = cpf;
+    }
+
+    public int getFone() {
+        return fone;
+    }
+
+    public void setFone(int fone) {
         this.fone = fone;
     }
 
