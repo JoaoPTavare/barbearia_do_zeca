@@ -18,7 +18,7 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/apiAgendamento")
 public class AgendamentoController {
     
      @Autowired
@@ -26,7 +26,7 @@ public class AgendamentoController {
 
 
 
-    @GetMapping("/agendamento")
+    @GetMapping
     public ResponseEntity<List<Agendamento>> listaAgendamento() {
         return ResponseEntity.status(HttpStatus.OK).body(agendamentoService.listaAgendamento());
 }
@@ -39,13 +39,13 @@ public class AgendamentoController {
 
 
 
-    @PostMapping("agendamento")
+    @PostMapping
     public ResponseEntity<Agendamento> salvaAgendamento(@RequestBody Agendamento agendamento){
         return ResponseEntity.status(HttpStatus.CREATED).body(agendamentoService.salvaAgendamento(agendamento));
     }
 
 
-    @PutMapping("agendamento")
+    @PutMapping
     public ResponseEntity<Agendamento> atualizaAgendamento(@RequestBody Agendamento agendamento){
         return ResponseEntity.status(HttpStatus.OK).body(agendamentoService.atualizaAgendamento(agendamento));
     }

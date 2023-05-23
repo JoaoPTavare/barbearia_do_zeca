@@ -17,14 +17,14 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/apiClientes")
  
 public class ClienteController {
 
     @Autowired
     private ClienteService clienteService;
 
-    @GetMapping("/clientes")
+    @GetMapping
     public ResponseEntity<List<Cliente>> listaClientes(){
         return ResponseEntity.status(HttpStatus.OK).body(clienteService.listaClientes());
     }
@@ -33,12 +33,12 @@ public class ClienteController {
         return ResponseEntity.status(HttpStatus.OK).body(clienteService.getByIdCliente(codCliente));
     }
 
-    @PostMapping("cliente")
+    @PostMapping
     public ResponseEntity<Cliente> salvaCliente(@RequestBody Cliente cliente){
         return ResponseEntity.status(HttpStatus.CREATED).body(clienteService.salvaCliente(cliente));
     }
 
-    @PutMapping("cliente")
+    @PutMapping
     public ResponseEntity<Cliente> atualizaCliente(@RequestBody Cliente cliente){
         return ResponseEntity.status(HttpStatus.OK).body(clienteService.atualizaCliente(cliente));
     }

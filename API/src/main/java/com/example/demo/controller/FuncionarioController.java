@@ -18,7 +18,7 @@ import java.util.Optional;
  
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/apiFuncionario")
 public class FuncionarioController {
 
 
@@ -26,7 +26,7 @@ public class FuncionarioController {
     @Autowired
     private FuncionarioService funcionarioService;
 
-    @GetMapping("/funcionario")
+    @GetMapping
     public ResponseEntity<List<Funcionario>> listFuncionario(){
         return ResponseEntity.status(HttpStatus.OK).body(funcionarioService.listaFuncionario());
     }
@@ -36,12 +36,12 @@ public class FuncionarioController {
         return ResponseEntity.status(HttpStatus.OK).body(funcionarioService.getByIdFuncionario(codFuncionario));
     }
 
-    @PutMapping("funcionario")
+    @PutMapping
     public ResponseEntity<Funcionario> atualizaFuncionario(@RequestBody Funcionario funcionario){
         return ResponseEntity.status(HttpStatus.OK).body(funcionarioService.atualizaFuncionario(funcionario));
     }
 
-    @PostMapping("funcionario")
+    @PostMapping
     public ResponseEntity<Funcionario> salvaFuncionario(@RequestBody Funcionario funcionario){
         return ResponseEntity.status(HttpStatus.CREATED).body(funcionarioService.salvaFuncionario(funcionario));
     }

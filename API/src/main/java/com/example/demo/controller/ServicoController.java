@@ -18,7 +18,7 @@ import java.util.Optional;
 
  
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/apiServico")
 
 public class ServicoController {
 
@@ -28,7 +28,7 @@ public class ServicoController {
     @Autowired
     private ServicoService servicoService;
 
-    @GetMapping("/servico")
+    @GetMapping
     public ResponseEntity<List<Servico>> listaServico(){
         return ResponseEntity.status(HttpStatus.OK).body(servicoService.listaServico());
     }
@@ -38,12 +38,12 @@ public class ServicoController {
         return ResponseEntity.status(HttpStatus.OK).body(servicoService.getByIdServico(codServico));
     }
 
-    @PutMapping("servico")
+    @PutMapping
     public ResponseEntity<Servico> atualizaServico(@RequestBody Servico servico){
         return ResponseEntity.status(HttpStatus.OK).body(servicoService.atualizaServico(servico));
     }
 
-    @PostMapping("servico")
+    @PostMapping
     public ResponseEntity<Servico> salvaServico(@RequestBody Servico servico){
         return ResponseEntity.status(HttpStatus.CREATED).body(servicoService.salvaServico(servico));
     }
