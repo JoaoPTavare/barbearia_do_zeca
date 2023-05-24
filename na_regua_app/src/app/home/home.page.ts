@@ -10,9 +10,9 @@ export class HomePage {
 
 
   public items = [
-    {titulo:'Corte padrão'},
-    {titulo:'Barba'},
-    {titulo:'Sobrancelha' }
+    {titulo:'Corte padrão', adicionado :false},
+    {titulo:'Barba', adicionado :false},
+    {titulo:'Sobrancelha', adicionado :false }
   ];
 
   public barbeariaLogo=[ {imagem:'img01.jpg'} ];

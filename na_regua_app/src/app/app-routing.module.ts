@@ -36,10 +36,6 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'selec-bab',
-    loadChildren: () => import('./selec-bab/selec-bab.module').then( m => m.SelecBabPageModule)
-  },
-  {
     path: 'selec-barb',
     loadChildren: () => import('./selec-barb/selec-barb.module').then( m => m.SelecBarbPageModule)
   },
