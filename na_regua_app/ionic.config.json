@@ -1,0 +1,7 @@
+{
+  "name": "na_regua_app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

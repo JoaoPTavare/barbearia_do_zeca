@@ -1,14 +1,13 @@
-import { Component, OnInit} from '@angular/core';
-import { IonicModule,NavController, PopoverController,  } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { NavController, PopoverController,  } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  standalone: true,
-  imports: [IonicModule]
 })
-export class HomePage implements OnInit{
+export class HomePage {
+
 
   public items = [
     {titulo:'Corte padrão'},
@@ -23,13 +22,12 @@ export class HomePage implements OnInit{
 
   constructor(private PopoverController: PopoverController, private navCtrl: NavController) {}
 
-  addItem(itens:any){
-    itens.adicionado = true;
+  addItem(item:any){
+    item.adicionado = true;
   }
 
   removeItem(itens:any){
     itens.adicionado = false;
   }
-  ngOnInit() {
-  }
 }
+

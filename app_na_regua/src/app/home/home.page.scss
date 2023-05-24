@@ -1,10 +1,8 @@
 .header-top{
-  height: 45%;
+ height: 300px; 
 
 }
-.body{
-  margin-top: 50px;
-}
+
 .body-img{
   width: 94%;
   height: 70%;
@@ -29,6 +27,10 @@ ion-button[type="rodape"] {
   text-align: left;
   font-size: 20px;
   margin-left: 20px;
+  font-family: 'Fonte', sans-serif;
+}
+.body-top{
+  margin-top: 300px;
 }
 
 .body-grid{
@@ -36,6 +38,7 @@ ion-button[type="rodape"] {
   border-radius:20px 20px 0px 0px;
   height: 100%;
   width: 100%;
+  font-family: 'Fonte', sans-serif;
   
 }
 .body-button{
@@ -43,6 +46,7 @@ ion-button[type="rodape"] {
 }
 .body-line{
   margin-left: 20%;
+  font-family: 'Fonte', sans-serif;
 
 }
 
