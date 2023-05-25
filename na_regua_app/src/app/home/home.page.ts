@@ -26,8 +26,11 @@ export class HomePage {
     item.adicionado = true;
   }
 
-  removeItem(itens:any){
-    itens.adicionado = false;
+  removeItem(item:any){
+    item.adicionado = false;
   }
+  selectRow(item:any){
+   this.selectRow = item.adicionado;
+   }
 }
 
