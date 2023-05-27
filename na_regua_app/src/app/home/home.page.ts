@@ -8,11 +8,10 @@ import { NavController, PopoverController,  } from '@ionic/angular';
 })
 export class HomePage {
 
-
   public items = [
-    {titulo:'Corte padrão', adicionado :false},
-    {titulo:'Barba', adicionado :false},
-    {titulo:'Sobrancelha', adicionado :false }
+    {titulo:'Corte padrão R$ 35.00 ', adicionado :false},
+    {titulo:'Barba R$ 30.00', adicionado :false},
+    {titulo:'Sobrancelha R$ 20.00', adicionado :false }
   ];
 
   public barbeariaLogo=[ {imagem:'img01.jpg'} ];
@@ -29,8 +28,5 @@ export class HomePage {
   removeItem(item:any){
     item.adicionado = false;
   }
-  selectRow(item:any){
-   this.selectRow = item.adicionado;
-   }
 }
 

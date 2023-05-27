@@ -1,37 +1,32 @@
 <ion-header class="header-top" >
-  <ion-grid>
-      <ion-row class="header-line">
-        <ion-col size="12">
-          <p class="strong">Home</p>
+      <ion-row class="header-line1">
+        <ion-col size="6">
+          <h4 class="strong">Home</h4>
         </ion-col>
       </ion-row>
 
-    <ion-grid>
-      <ion-row >
+     <ion-row class="row-img">
         <ion-col size="12">
           <img class="body-img" [src]="barberImg + 'img01.jpg'">
         </ion-col>
-      </ion-row>
-    </ion-grid>
+      </ion-row> 
       
-    <ion-row class="header-line">
-      <ion-col size="12">
-        <p class="strong">Serviços</p>
+    <ion-row class="header-line2">
+      <ion-col size="6">
+        <h4 class="strong">Serviços</h4>
       </ion-col>
     </ion-row>
-  </ion-grid>
-
 </ion-header>  
 
-<ion-content scroll-Y="false" class="body-top">
+<ion-content scroll-Y="false">
 
   <ion-grid class="body-grid">    
-     <ion-row  *ngFor="let item of items; let ix = index" [ngClass]="{'select-row': selectRow}">
-      <ion-col size="6">
-        <p class="body-line">{{ item.titulo }}</p>
+     <ion-row  *ngFor="let item of items; let ix = index" [ngClass]="{'select-row': item.adicionado}">
+      <ion-col size="10">
+        <h5 class="body-line">{{ item.titulo }}</h5>
       </ion-col>
       
-        <ion-col size="6" >
+        <ion-col size="2" >
           <ion-button class="body-button" (click)="addItem(item)" *ngIf="!item.adicionado"> + </ion-button>
           
           <ion-button class="body-button" (click)="removeItem(item)" *ngIf="item.adicionado"> - </ion-button>
