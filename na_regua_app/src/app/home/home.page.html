@@ -42,15 +42,25 @@
 </ion-content>
 
 
-<ion-footer class="footer-line">
-  <ion-row>
-      <ion-button class="button-footer1">
-        <ion-icon name="home"></ion-icon>
-      </ion-button>
-      
-      <ion-button class="button-footer2">
-        <ion-icon name="calendar"></ion-icon>
-      </ion-button>
-    </ion-row>
 
+<ion-footer class="footer-line">
+  <ion-row class="ion-align-items-center header-subline">
+    <ion-col size="6">
+      <ion-segment [(ngModel)]="segment">
+        <ion-segment-button  [value]="categoria[0].id" class="button-footer">
+          <ion-icon name="home"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-col>
+
+    <ion-col size="6">
+      <ion-segment [(ngModel)]="segment">
+        <ion-segment-button [value]="categoria[1].id" class="button-footer">
+          <ion-icon name="calendar"></ion-icon>
+        </ion-segment-button>
+
+      </ion-segment>
+    </ion-col>
+  </ion-row> 
 </ion-footer>
+

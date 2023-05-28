@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, PopoverController,  } from '@ionic/angular';
+import { Component} from '@angular/core';
+import { NavController, PopoverController} from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -14,10 +14,20 @@ export class HomePage {
     {titulo:'Sobrancelha R$ 20.00', adicionado :false }
   ];
 
+  public horarios = [
+   
+  ];
+
   public barbeariaLogo=[ {imagem:'img01.jpg'} ];
  
   public barberImg = '../../assets/imagens/';
  
+  public segment = '1';
+  
+  public categoria = [
+    { id: '1', home: this.items },
+    { id: '2', home: this.horarios}  
+  ]
 
   constructor(private PopoverController: PopoverController, private navCtrl: NavController) {}
 
@@ -29,4 +39,3 @@ export class HomePage {
     item.adicionado = false;
   }
 }
-
