@@ -41,15 +41,41 @@
   </ion-grid>
 </ion-content>
 
-<ion-content scroll-Y="false" *ngIf="segment == categoria[1].id">
-  <ion-card>
-    <ion-card-header>
-      
-    </ion-card-header>
-    <ion-card-content>
-      
-    </ion-card-content>
-  </ion-card>
+<ion-content  scroll-Y="false" *ngIf="segment == categoria[1].id">
+  
+  <ion-row class="row-segment1">
+    <h3 class="strong">Olá Jonathan,<br> agendamento finalizado!</h3>
+  </ion-row>
+ 
+  <ion-col size="12" class="ion-text-center ion-align-items-center">
+    <ion-card class="agen-card">
+      <ion-card-header>
+        <ion-row class="card-line-1">
+          <ion-col>
+            <div>Barbeiro: Matheus</div>
+          </ion-col>
+        </ion-row>
+      </ion-card-header>
+     
+      <ion-card-content>
+        <ion-row class="card-line-2">
+          <ion-col>
+            <div>Corte Padrão</div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="card-line-3">
+          <ion-col size="12">
+            <div >19/03/2023 11:00</div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="card-line-4">
+          <ion-col>
+            <div>Cancelar</div>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+</ion-col>
 </ion-content>
 
 

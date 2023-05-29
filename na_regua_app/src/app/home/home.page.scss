@@ -8,7 +8,6 @@
    width: 95%;
    margin-left: auto;
    margin-right: auto;
-   
  }
  
  .header-line1{
@@ -33,7 +32,6 @@
    border-radius:20px 20px 0px 0px;
    height: 100%;
    width: 100%;
-   
  }
 
  .body-button{
@@ -61,13 +59,56 @@
  .body-line{
    margin-left: 20%;
    font-family: 'Fonte', sans-serif;
+ }
+.row-segment1{
+  size:10px;
+  margin-left: 30px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+ .agen-card{
+  --background: #bba2b7;
+  border-radius: 10px;
+  height: 200px;
+  width: 300px;
+  margin-right: auto;
+   margin-left: auto;
+ }
  
+ .card-line-1{
+  font-family: 'Fonte', sans-serif;
+  color: black;
+  font-weight: bold;
+ }
+
+ .card-line-2{
+  font-family: 'Fonte', sans-serif;
+  color: rgb(116, 116, 116);
+  font-weight: bold;
+  font-size: 20px;
+ }
+
+ .card-line-3{
+  font-family: 'Fonte', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #149529;
+  width: 50%;
+  margin-left: 70px;
+ }
+
+ .card-line-4{
+  font-family: 'Fonte', sans-serif;
+  color: red;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 20px;
  }
  
  .button-footer{
    margin-right: auto;
    margin-left: auto;
-   
  }
  
  .footer-line{
