@@ -1,4 +1,4 @@
-<ion-header class="header-top" >
+<ion-header class="header-top" *ngIf="segment == categoria[0].id" >
       <ion-row class="header-line1">
         <ion-col size="6">
           <h4 class="strong">Home</h4>
@@ -18,7 +18,7 @@
     </ion-row>
 </ion-header>  
 
-<ion-content scroll-Y="false">
+<ion-content scroll-Y="false" *ngIf="segment == categoria[0].id">
 
   <ion-grid class="body-grid">    
      <ion-row  *ngFor="let item of items; let ix = index" [ngClass]="{'select-row': item.adicionado}">
@@ -41,6 +41,16 @@
   </ion-grid>
 </ion-content>
 
+<ion-content scroll-Y="false" *ngIf="segment == categoria[1].id">
+  <ion-card>
+    <ion-card-header>
+      
+    </ion-card-header>
+    <ion-card-content>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>
 
 
 <ion-footer class="footer-line">
