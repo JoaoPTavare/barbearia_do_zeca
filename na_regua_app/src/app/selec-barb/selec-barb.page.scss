@@ -15,7 +15,6 @@ ion-button[type="submit"] {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 
   ion-button[type="rodape"] {
@@ -49,6 +48,17 @@ ion-toolbar{
 ion-title{
   font-size: 2em;
 
+  }
+  .body-button{
+    margin-left: auto;
+    margin-right: auto;
+    background: #45304E;
+
+  }
+  .body-line{
+    margin-left: 20%;
+    font-family: 'Fonte', sans-serif;
+  
   }
 
   .radius{
