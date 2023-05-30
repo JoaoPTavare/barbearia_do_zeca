@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
-import { NavController, PopoverController} from '@ionic/angular';
+import { NavController, } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,14 +10,17 @@ import { NavController, PopoverController} from '@ionic/angular';
 export class HomePage {
 
   public items = [
-    {titulo:'Corte padrão R$ 35.00 ', adicionado :false},
-    {titulo:'Barba R$ 30.00', adicionado :false},
-    {titulo:'Sobrancelha R$ 20.00', adicionado :false }
+    {id:'1', titulo:'Corte padrão R$ 35.00', adicionado: false},
+    {id:'2',titulo:'Barba R$ 30.00', adicionado: false},
+    {id:'3',titulo:'Sobrancelha R$ 20.00', adicionado: false }
   ];
 
-  public horarios = [
-   
-  ];
+  public horarios ={
+    id: '',
+    titulo: '',
+    adicionado: false
+  };
+  
 
   public barbeariaLogo=[ {imagem:'img01.jpg'} ];
  
@@ -29,7 +33,10 @@ export class HomePage {
     { id: '2', home: this.horarios}  
   ]
 
-  constructor(private PopoverController: PopoverController, private navCtrl: NavController) {}
+  constructor( private  route: ActivatedRoute) {  
+    this.route.queryParams.subscribe(params => {
+    this.horarios = params['items'];
+  });}
 
   addItem(item:any){
     item.adicionado = true;
@@ -38,4 +45,5 @@ export class HomePage {
   removeItem(item:any){
     item.adicionado = false;
   }
+
 }
