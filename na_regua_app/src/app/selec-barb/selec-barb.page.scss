@@ -8,6 +8,7 @@ ion-button[type="submit"] {
     margin-bottom: 3em;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 8%;
     --padding-bottom: 27px;
     --padding-top: 27px;
     --padding-left: 60px;
@@ -15,6 +16,7 @@ ion-button[type="submit"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    --background-activated: #382439;
   }
 
   ion-button[type="rodape"] {
@@ -26,6 +28,7 @@ ion-button[type="submit"] {
     margin-left: 15%;
   
   }
+  
  ion-footer{
   background: #382439;
   }
@@ -35,6 +38,9 @@ ion-button[type="submit"] {
       --background: transparent;
       --ion-color-primary: #FFFFFF;
       --ion-color-primary-shade: #FFFFFF;
+      font-size: 24px;
+      
+      
   }
 
 

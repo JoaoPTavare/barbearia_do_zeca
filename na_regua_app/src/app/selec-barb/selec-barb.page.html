@@ -9,22 +9,19 @@
 
 <ion-grid class="radius">
   <ion-toolbar class="botao-voltar">
-    <ion-buttons slot="start">
-      <ion-back-button default-href="#"></ion-back-button>
-    </ion-buttons>
+      <ion-row>
+        <ion-icon name="chevron-back-outline" class="voltar" routerLink="/home"></ion-icon>
+      </ion-row> 
   </ion-toolbar>
 
-  <ion-row  *ngFor="let item of items; let ix = index" [ngClass]="{'select-row': item.adicionado}">
+  <ion-row  *ngFor="let item of items; let ix = index">
     <ion-row>
-      <ion-button type="submit" class="body-button" (click)="addItem(item)" >{{ item.titulo }}</ion-button>
+      <ion-button type="submit" class="body-button" routerLink="/agen-barber">{{ item.titulo }}</ion-button>
     </ion-row>
 
   </ion-row>   
 
-    <ion-footer>
-      <ion-button type="rodape" expand="block" routerLink="/agen-barb" >Ir para agenda!</ion-button>
-    </ion-footer>
-    
+
 </ion-grid>
 
 

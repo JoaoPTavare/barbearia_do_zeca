@@ -16,12 +16,10 @@ export class SelecBarbPage{
 
   constructor() { }
 
-  addItem(item:any){
-    item.adicionado = true;
-  }
+  isButtonActive = false;
 
-  removeItem(item:any){
-    item.adicionado = false;
+  changeColor() {
+    this.isButtonActive = !this.isButtonActive;
   }
-
 }
+
