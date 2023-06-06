@@ -1,0 +1,48 @@
+.row-img{
+    text-align: center;
+   }
+    
+    .body-img{ 
+      border-radius: 40px;
+      height: 80%;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .header-line1{
+      text-align: left;
+      font-size: 10px;
+      margin-left: 20px;
+      font-family: 'Fonte', sans-serif;
+      margin-top: 20px;
+    }
+   
+    .header-line2{
+     text-align: left;
+     font-size: 10px;
+     margin-left: 20px;
+     font-family: 'Fonte', sans-serif;
+     margin-top: -40px;
+     
+   }
+   
+    .body-grid{
+      background:  #382439;
+      border-radius:20px 20px 0px 0px;
+      height: 100%;
+      width: 100%;
+    }
+
+    ion-button[type="submit"] {
+      --ion-color-primary: #92799d;
+      --ion-color-primary-shade: #92799d;
+      --border-radius: 20px;
+      font-size: 1.2em;
+      width: 100%;
+      margin-top: 5%;
+    }
+
+    .strong{
+      font-family: 'Fonte', sans-serif;
+    }

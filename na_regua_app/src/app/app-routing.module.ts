@@ -38,7 +38,11 @@ const routes: Routes = [
   {
     path: 'selec-barb',
     loadChildren: () => import('./selec-barb/selec-barb.module').then( m => m.SelecBarbPageModule)
+  },  {
+    path: 'home-barb',
+    loadChildren: () => import('./home-barb/home-barb.module').then( m => m.HomeBarbPageModule)
   },
+
 ];
 
 @NgModule({
