@@ -24,6 +24,8 @@ export class ClienteServiceService {
     })
   }
 
+
+  /*Enviar dados para serem processados "POST"*/
   public postDados(obj: any){
     return new Promise((ret) => {
 
@@ -58,6 +60,8 @@ export class ClienteServiceService {
     })
   }
 
+
+  /*Exclusão de cliente */
   public deleteDados(id: number){
     return new Promise((ret) => {
 
