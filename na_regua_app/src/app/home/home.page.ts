@@ -22,6 +22,7 @@ export class HomePage implements OnInit {
     adicionado: false
   };
   
+  public itensAdc:any = []
 
   public barbeariaLogo=[ {imagem:'img01.jpg'} ];
  
@@ -42,23 +43,28 @@ export class HomePage implements OnInit {
 
   constructor(public navCtrl: NavController, private  route: ActivatedRoute) {  
     this.route.queryParams.subscribe(params => {
-    this.horarios = params['items'];
+      this.barbeiro = params['barbeiro'];
+      this.horarios = params['items'];
   });
  
-}
+  }
 
   addItem(item:any){
     item.adicionado = true;
+    this.itensAdc.push(item);
   }
 
   removeItem(item:any){
     item.adicionado = false;
+    let ix = this.itensAdc.findIndex((el:any) => el.cod == item.cod);
+    this.itensAdc.splice(ix, 1)
   }
 
   pushPage(){
     this.navCtrl.navigateForward('selec-barb', {
     });
   }
+  
   ngOnInit() {
     }
 

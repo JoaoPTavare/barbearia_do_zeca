@@ -22,10 +22,11 @@ export class AgenBarberPage implements OnInit {
     adicionado: false
   };
 
-  pushPage(){
+  pushPage(barbeiro:any){
     this.navCtrl.navigateForward('home', {
-      queryParams:{ barbeiro : this.barbeiro}
+      queryParams: { barbeiro: barbeiro}
     });
+    
   }
 
   ngOnInit() {

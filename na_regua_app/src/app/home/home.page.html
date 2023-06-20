@@ -58,9 +58,9 @@
       </ion-card-header>
      
       <ion-card-content>
-        <ion-row class="card-line-2">
+        <ion-row class="card-line-2" *ngFor = "let item of itensAdc; let ix = index">
           <ion-col>
-            <div>{{horarios.titulo}}</div>
+            <div>{{item.titulo}}</div>
           </ion-col>
         </ion-row>
         <ion-row class="card-line-3">

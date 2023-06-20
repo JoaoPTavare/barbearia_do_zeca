@@ -33,7 +33,7 @@ export class SelecBarbPage implements OnInit {
   
   pushPage(barbeiro: any){
     this.navCtrl.navigateForward('agen-barber', {
-      queryParams: { barbeiro: barbeiro}
+    queryParams: { barbeiro: barbeiro}
     });
   }
   ngOnInit() {
