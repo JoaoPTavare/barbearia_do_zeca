@@ -42,6 +42,14 @@ const routes: Routes = [
     path: 'home-barb',
     loadChildren: () => import('./home-barb/home-barb.module').then( m => m.HomeBarbPageModule)
   },
+  {
+    path: 'data-barb',
+    loadChildren: () => import('./data-barb/data-barb.module').then( m => m.DataBarbPageModule)
+  },
+  {
+    path: 'barb-agen',
+    loadChildren: () => import('./barb-agen/barb-agen.module').then( m => m.BarbAgenPageModule)
+  },
 
 ];
 

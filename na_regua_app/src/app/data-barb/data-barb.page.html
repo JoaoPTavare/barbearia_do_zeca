@@ -1,0 +1,32 @@
+<ion-toolbar>
+  <ion-title class="titulo"> <h1>Selecione a data</h1></ion-title>
+</ion-toolbar>
+
+
+<ion-content [fullscreen]="true">
+
+<ion-grid >
+<ion-row >
+  <ion-col>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="1">
+        <ion-icon name="chevron-back-outline" class="voltar" routerLink="/selec-barb"></ion-icon>
+      </ion-col>
+    </ion-row>
+  
+  </ion-col>
+</ion-row>
+
+
+<ion-row  class="custom-datetime">
+  <ion-datetime presentation="date" position="stacked"></ion-datetime>
+</ion-row>
+
+<ion-row>
+  <ion-col size="12"> 
+    <ion-button type="rodape" expand="block" routerLink="/barb-agen">Visualizar agendamentos </ion-button>
+  </ion-col>
+</ion-row> 
+
+</ion-grid>
+</ion-content>
