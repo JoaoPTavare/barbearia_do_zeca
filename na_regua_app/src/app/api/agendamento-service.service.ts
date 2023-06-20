@@ -9,69 +9,45 @@ export class AgendamentoServiceService {
 
 
 private host = "http://localhost:8080/apiAgendamento";
+  http: any;
 
 
 
-  constructor(private http: HttpClient) { }
+public postAgendamento(obj: any) {
+  return new Promise((ret) => {
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json; charset=UTF-8');
 
-  /*trás todos os agendamento*/
-  public getAllClientes(){
-    return new Promise((ret) => {
-
-      // requisição GET
-      this.http.get(this.host).subscribe(dados => {
-
-        ret(dados);
-
+    this.http
+      .post(this.host, obj, { headers: headers })
+      .subscribe((Agendamento: any) => {
+        ret(Agendamento);
       });
-    })
-  }
+  });
+}
 
-  public postDados(obj: any){
-    return new Promise((ret) => {
+public getAllAgendamento() {
+  return new Promise((resolve) => {
+    this.http.get(this.host).subscribe((response: any) => {
+      const Agendamento = response.content;
+      resolve(Agendamento);
+    });
+  });
+}
 
-      /* cabeçalho da requisição */
-      let headers = new HttpHeaders();
-      headers.append('Content-Type', 'application/json; charset=UTF-8');
+public getAgendamentoById(id: number) {
+  return new Promise((ret) => {
+    this.http.get(this.host + '{' + id + '}').subscribe((Agendamento: any) => {
+      ret(Agendamento);
+    });
+  });
+}
 
-      // requisição POST
-      this.http.post(this.host, JSON.stringify(obj), { headers: headers }).subscribe(dados => {
-
-        ret(dados);
-
-      });
-    })
-  }
-
-
-  /* Cadastra um cliente*/
-  public putDados(obj: any){
-    return new Promise((ret) => {
-      
-      /* cabeçalho da requisição */
-      let headers = new HttpHeaders();
-      headers.append('Content-Type', 'application/json; charset=UTF-8');
-
-      // requisição PUT
-      this.http.put(this.host + obj.id, JSON.stringify(obj), { headers: headers }).subscribe(dados => {
-
-        ret(dados);
-
-      });
-    })
-  }
-
-  public deleteDados(id: number){
-    return new Promise((ret) => {
-
-      // requisição DELETE
-      this.http.delete(this.host + id).subscribe(dados => {
-
-        console.log(dados);
-
-      });
-    })
-  }
-
-
+public deleteCliente(id: number) {
+  return new Promise<void>((resolve) => {
+    this.http.delete(this.host + '/' + id).subscribe((Agendamento: any) => {
+      resolve();
+    });
+  });
+}
 }

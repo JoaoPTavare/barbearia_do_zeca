@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,8 +18,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   
         this.http
           .post(this.host, obj, { headers: headers })
-          .subscribe((cliente) => {
-            ret(cliente);
+          .subscribe((Cliente) => {
+            ret(Cliente);
           });
       });
     }
