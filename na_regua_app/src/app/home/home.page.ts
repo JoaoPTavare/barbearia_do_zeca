@@ -1,14 +1,14 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { NavController, } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
-import { SelecBarbPage } from '../selec-barb/selec-barb.page';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   public items = [
     {id:'1', titulo:'Corte padrão R$ 35.00', adicionado: false},
@@ -36,13 +36,15 @@ export class HomePage {
 
   public barbeiro = {
     id: '',
-    titulo: ''
+    titulo: '',
+    adicionado: false
     };
 
   constructor(public navCtrl: NavController, private  route: ActivatedRoute) {  
     this.route.queryParams.subscribe(params => {
     this.horarios = params['items'];
   });
+ 
 }
 
   addItem(item:any){
@@ -58,5 +60,6 @@ export class HomePage {
     });
   }
   ngOnInit() {
-    };
+    }
+
 }
