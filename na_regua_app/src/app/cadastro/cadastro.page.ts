@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ClienteServiceService } from '../api/cliente-service.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AlertController, NavController, ToastController } from '@ionic/angular';
-import { HttpClientModule } from '@angular/common/http';
  
 
 @Component({
