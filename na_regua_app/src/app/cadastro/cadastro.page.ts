@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ClienteServiceService } from '../api/cliente-service.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AlertController, NavController, ToastController } from '@ionic/angular';
+import { HttpClientModule } from '@angular/common/http';
  
-import { cliente } from 'src/app/interface/interface.cliente';
-
 
 @Component({
   selector: 'app-cadastro',
@@ -16,7 +15,7 @@ export class CadastroPage implements OnInit {
   nome: FormControl | undefined;
   senha: FormControl | undefined;
   email: FormControl | undefined;
-  formulario: any;
+  formulario: FormGroup;
   ClienteServiceService: any;
 
   constructor(   private navCtrl: NavController,
@@ -39,14 +38,7 @@ export class CadastroPage implements OnInit {
     });
  }
 
-  ngOnInit(
-
- 
-
-
-  ) {
-
-  }
+  ngOnInit() {}
 
   async cadastrar() {
     const nome = this.formulario.value.nome;
@@ -63,14 +55,14 @@ export class CadastroPage implements OnInit {
       return;
     }
 
-    const cliente: Cliente = {
+    const cliente: any = {
       id: 0,
       nome: nome,
       email: email,
       senha: senha,
     };
 
-    this.ClienteServiceService.ClienteServiceService(cliente);
+    this.service.postCliente(cliente);
 
 
 }
