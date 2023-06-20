@@ -1,14 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ClienteServiceService } from '../api/cliente-service.service';
 import { AlertController, NavController, ToastController } from '@ionic/angular';
-=======
-import { NavController } from '@ionic/angular';
-import { ActivatedRoute, } from '@angular/router';
-
-
->>>>>>> d161d996e7add5deccb8e1e46574c462a3b85ccb
 
 @Component({
   selector: 'app-agen-barber',
@@ -17,10 +10,15 @@ import { ActivatedRoute, } from '@angular/router';
 })
 export class AgenBarberPage implements OnInit {
 
-<<<<<<< HEAD
-  nome: FormControl | undefined;
-  senha: FormControl | undefined;
-  email: FormControl | undefined;
+  cliente: FormControl | undefined;
+  funcionario: FormControl | undefined;
+  tempo: FormControl | undefined;
+  data: FormControl | undefined;
+ 
+ 
+ 
+ 
+ 
   formulario: FormGroup;
   ClienteServiceService: any;
 
@@ -31,63 +29,34 @@ export class AgenBarberPage implements OnInit {
     private alertController: AlertController,
 ) {
    
-    this.nome = new FormControl('', Validators.required);
-    this.email = new FormControl('', Validators.required);
-    this.senha = new FormControl('', Validators.required);
  
 
     this.formulario = this.formBuilder.group({
-      nome: this.nome,
-      email: this.email,
-      senha: this.senha,
- 
+      cliente: this.cliente,
+      funcionario: this.funcionario,
+      tempo: this.tempo,
+      data: this.data,
     });
  }
 
   ngOnInit() {}
 
   async cadastrar() {
-    const nome = this.formulario.value.nome;
-    const email = this.formulario.value.email;
-    const senha = this.formulario.value.senha;
-
-    if (!nome || !email || !senha) {
-      const alert = await this.alertController.create({
-        header: 'Erro',
-        message: 'Por favor, preencha todos os campos.',
-        buttons: ['OK'],
-      });
-      alert.present();
-      return;
-    }
-
-    const cliente: any = {
+    const cliente = this.formulario.value.cliente;
+    const funcionario = this.formulario.value.funcionario;
+    const data = this.formulario.value.data;
+    const tempo = this.formulario.value.tempo;
+  
+    const Agendamento: any = {
+      
       id: 0,
-      nome: nome,
-      email: email,
-      senha: senha,
+      cliente: cliente,
+      funcionario: funcionario,
+      data: data,
+      tempo: tempo,
     };
 
-    this.service.postCliente(cliente);
-=======
-  constructor(private route: ActivatedRoute, public navCtrl: NavController) {
-    this.route.queryParams.subscribe(params => {
-      this.barbeiro = params['barbeiro'];
-      });
-}
-  public barbeiro = {
-    id: '',
-    titulo: '',
-    adicionado: false
-  };
-
-  pushPage(barbeiro:any){
-    this.navCtrl.navigateForward('home', {
-      queryParams: { barbeiro: barbeiro}
-    });
-    
-  }
->>>>>>> d161d996e7add5deccb8e1e46574c462a3b85ccb
+    this.service.postAgendamento(Agendamento);
 
   }
 }
