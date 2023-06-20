@@ -1,13 +1,14 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { NavController, } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   public items = [
     {id:'1', titulo:'Corte padrão R$ 35.00', adicionado: false},
@@ -21,6 +22,7 @@ export class HomePage {
     adicionado: false
   };
   
+  public itensAdc:any = []
 
   public barbeariaLogo=[ {imagem:'img01.jpg'} ];
  
@@ -33,17 +35,37 @@ export class HomePage {
     { id: '2', home: this.horarios}  
   ]
 
-  constructor( private  route: ActivatedRoute) {  
+  public barbeiro = {
+    id: '',
+    titulo: '',
+    adicionado: false
+    };
+
+  constructor(public navCtrl: NavController, private  route: ActivatedRoute) {  
     this.route.queryParams.subscribe(params => {
-    this.horarios = params['items'];
-  });}
+      this.barbeiro = params['barbeiro'];
+      this.horarios = params['items'];
+  });
+ 
+  }
 
   addItem(item:any){
     item.adicionado = true;
+    this.itensAdc.push(item);
   }
 
   removeItem(item:any){
     item.adicionado = false;
+    let ix = this.itensAdc.findIndex((el:any) => el.cod == item.cod);
+    this.itensAdc.splice(ix, 1)
   }
+
+  pushPage(){
+    this.navCtrl.navigateForward('selec-barb', {
+    });
+  }
+  
+  ngOnInit() {
+    }
 
 }

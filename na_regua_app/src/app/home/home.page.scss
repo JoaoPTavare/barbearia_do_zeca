@@ -1,116 +1,121 @@
 .row-img{
- text-align: center;
-}
- 
- .body-img{ 
-   border-radius: 40px;
-   height: 80%;
-   width: 95%;
-   margin-left: auto;
-   margin-right: auto;
+  text-align: center;
  }
+  
+  .body-img{ 
+    border-radius: 40px;
+    height: 80%;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .header-line1{
+    text-align: left;
+    font-size: 10px;
+    margin-left: 20px;
+    font-family: 'Fonte', sans-serif;
+    margin-top: 20px;
+  }
  
- .header-line1{
+  .header-line2{
    text-align: left;
    font-size: 10px;
    margin-left: 20px;
    font-family: 'Fonte', sans-serif;
-   margin-top: 20px;
+   margin-top: -40px;
+   
  }
-
- .header-line2{
-  text-align: left;
-  font-size: 10px;
-  margin-left: 20px;
-  font-family: 'Fonte', sans-serif;
-  margin-top: -40px;
-  
-}
-
- .body-grid{
-   background:  #382439;
-   border-radius:20px 20px 0px 0px;
-   height: 100%;
-   width: 100%;
- }
-
- .body-button{
-   margin-left: auto;
-   margin-right: auto;
-   height: 90%;
-   margin-top: -2px;
- }
-   .select-row{
-    background-color:#bba2b7;
-    border-radius:30px ;
-    height: 50px;
-    margin-bottom: 5px;
-   }
-   ion-button[type="rodape"] {
-    --ion-color-primary: #149529;
-    --ion-color-primary-shade: #096919;
-    --border-radius: 10px;
-    width: 70%;
-    height: 40px;
-    margin-left: 15%;
-    margin-top: 50px;
+ 
+  .body-grid{
+    background:  #382439;
+    border-radius:20px 20px 0px 0px;
+    height: 100%;
+    width: 100%;
   }
-
- .body-line{
-   margin-left: 20%;
-   font-family: 'Fonte', sans-serif;
- }
-.row-segment1{
-  size:10px;
-  margin-left: 30px;
-  margin-top: 30px;
-  font-weight: bold;
-}
- .agen-card{
-  --background: #bba2b7;
-  border-radius: 10px;
-  height: 200px;
-  width: 300px;
-  margin-right: auto;
-   margin-left: auto;
- }
  
- .card-line-1{
-  font-family: 'Fonte', sans-serif;
-  color: black;
-  font-weight: bold;
- }
-
- .card-line-2{
-  font-family: 'Fonte', sans-serif;
-  color: rgb(116, 116, 116);
-  font-weight: bold;
-  font-size: 20px;
- }
-
- .card-line-3{
-  font-family: 'Fonte', sans-serif;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  border-radius: 10px;
-  background-color: #149529;
-  width: 50%;
-  margin-left: 70px;
- }
-
- .card-line-4{
-  font-family: 'Fonte', sans-serif;
-  color: red;
-  font-weight: bold;
-  margin-top: 15px;
-  font-size: 20px;
- }
+  .body-button{
+    margin-left: auto;
+    margin-right: auto;
+    height: 90%;
+    margin-top: -2px;
+  }
+    .select-row{
+     background-color:#bba2b7;
+     border-radius:30px ;
+     height: 50px;
+     margin-bottom: 5px;
+    }
+    ion-button[type="rodape"] {
+     --ion-color-primary: #149529;
+     --ion-color-primary-shade: #096919;
+     --border-radius: 10px;
+     width: 70%;
+     height: 40px;
+     margin-left: 15%;
+     margin-top: 50px;
+   }
  
- .button-footer{
+  .body-line{
+    margin-left: 20%;
+    font-family: 'Fonte', sans-serif;
+  }
+ .row-segment1{
+   size:10px;
+   margin-left: 30px;
+   margin-top: 30px;
+   font-weight: bold;
+ }
+  .agen-card{
+   --background: #bba2b7;
+   border-radius: 10px;
+   height: 200px;
+   width: 300px;
    margin-right: auto;
    margin-left: auto;
- }
+  }
+  
+  .card-line-1{
+   font-family: 'Fonte', sans-serif;
+   color: black;
+   font-weight: bold;
+   font-size: 20px;
+  }
  
- .footer-line{
-   background: black;
- }
+  .card-line-2{
+   font-family: 'Fonte', sans-serif;
+   color: rgb(116, 116, 116);
+   font-weight: bold;
+   font-size: 18px;
+   margin-top: -8px;
+  }
+ 
+  .card-line-3{
+   font-family: 'Fonte', sans-serif;
+   color: rgb(255, 255, 255);
+   font-weight: bold;
+   border-radius: 10px;
+   background-color: #149529;
+   width: 50%;
+   margin-left: 70px;
+   font-size: 15px;
+   margin-bottom: -10px;
+  }
+ 
+  .card-line-4{
+   font-family: 'Fonte', sans-serif;
+   color: red;
+   font-weight: bold;
+   font-size: 18px;
+   margin-bottom: -20px;
+   margin-top: 5px;
+  }
+  
+  .button-footer{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .footer-line{
+    background: black;
+  }

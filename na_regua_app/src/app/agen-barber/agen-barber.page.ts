@@ -1,7 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ClienteServiceService } from '../api/cliente-service.service';
 import { AlertController, NavController, ToastController } from '@ionic/angular';
+=======
+import { NavController } from '@ionic/angular';
+import { ActivatedRoute, } from '@angular/router';
+
+
+>>>>>>> d161d996e7add5deccb8e1e46574c462a3b85ccb
 
 @Component({
   selector: 'app-agen-barber',
@@ -10,6 +17,7 @@ import { AlertController, NavController, ToastController } from '@ionic/angular'
 })
 export class AgenBarberPage implements OnInit {
 
+<<<<<<< HEAD
   nome: FormControl | undefined;
   senha: FormControl | undefined;
   email: FormControl | undefined;
@@ -61,6 +69,25 @@ export class AgenBarberPage implements OnInit {
     };
 
     this.service.postCliente(cliente);
+=======
+  constructor(private route: ActivatedRoute, public navCtrl: NavController) {
+    this.route.queryParams.subscribe(params => {
+      this.barbeiro = params['barbeiro'];
+      });
+}
+  public barbeiro = {
+    id: '',
+    titulo: '',
+    adicionado: false
+  };
+
+  pushPage(barbeiro:any){
+    this.navCtrl.navigateForward('home', {
+      queryParams: { barbeiro: barbeiro}
+    });
+    
+  }
+>>>>>>> d161d996e7add5deccb8e1e46574c462a3b85ccb
 
   }
 }
