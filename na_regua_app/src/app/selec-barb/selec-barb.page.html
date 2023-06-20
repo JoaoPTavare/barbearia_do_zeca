@@ -14,10 +14,10 @@
       </ion-row> 
   </ion-toolbar>
 
-  <ion-row  *ngFor="let item of items; let ix = index">
+  <ion-row  *ngFor="let barbeiro of barbeiros; let ix = index">
     <ion-col>
       <ion-row>
-        <ion-button type="submit" routerLink="/agen-barber">{{ item.titulo }}</ion-button>
+        <ion-button type="submit" routerLink="/agen-barber">{{ barbeiro.titulo }}</ion-button>
       </ion-row>
     </ion-col>
   </ion-row>   

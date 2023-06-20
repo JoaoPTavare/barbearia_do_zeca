@@ -35,7 +35,7 @@
       
      <ion-row>
         <ion-col size="12"> 
-          <ion-button type="rodape" expand="block" routerLink="/selec-barb">Escolha seu barbeiro</ion-button>
+          <ion-button type="rodape" expand="block" (click)="pushPage()">Escolha seu barbeiro</ion-button>
         </ion-col>
       </ion-row>      
   </ion-grid>
@@ -52,7 +52,7 @@
       <ion-card-header>
         <ion-row class="card-line-1">
           <ion-col>
-            <div>Barbeiro: Matheus</div>
+            <div>Barbeiro: {{barbeiro.titulo}}</div>
           </ion-col>
         </ion-row>
       </ion-card-header>
@@ -100,4 +100,3 @@
   </ion-row> 
 </ion-footer>
 
-<ion-button href="/cadastro" >Cadastrar</ion-button>

@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { NavController, } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { SelecBarbPage } from '../selec-barb/selec-barb.page';
 
 @Component({
   selector: 'app-home',
@@ -33,10 +34,16 @@ export class HomePage {
     { id: '2', home: this.horarios}  
   ]
 
-  constructor( private  route: ActivatedRoute) {  
+  public barbeiro = {
+    id: '',
+    titulo: ''
+    };
+
+  constructor(public navCtrl: NavController, private  route: ActivatedRoute) {  
     this.route.queryParams.subscribe(params => {
     this.horarios = params['items'];
-  });}
+  });
+}
 
   addItem(item:any){
     item.adicionado = true;
@@ -46,4 +53,10 @@ export class HomePage {
     item.adicionado = false;
   }
 
+  pushPage(){
+    this.navCtrl.navigateForward('selec-barb', {
+    });
+  }
+  ngOnInit() {
+    };
 }
