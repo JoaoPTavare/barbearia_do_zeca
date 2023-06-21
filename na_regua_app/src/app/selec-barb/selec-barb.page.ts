@@ -1,3 +1,4 @@
+import { FuncionarioServiceService } from './../api/funcionario-service.service';
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ActivatedRoute, } from '@angular/router';
@@ -21,13 +22,22 @@ export class SelecBarbPage implements OnInit {
     adicionado: false
   };
 
-  constructor(private route: ActivatedRoute, public navCtrl: NavController) {
+  FuncionarioServiceService: any;
+  listaFuncionario: any[] = []
+
+  constructor(private route: ActivatedRoute, 
+    private service: FuncionarioServiceService,
+    public navCtrl: NavController) {
     this.route.queryParams.subscribe(params => {
     this.barbeiro = params['barbeiro'];
     });
   }
 
-  barbeiroSelec() {
+ async barbeiroSelec() {
+  this.service.getAllDados().then((funcionario: any) => {
+    this.listaFuncionario = funcionario;
+  });;
+
 
   }
   

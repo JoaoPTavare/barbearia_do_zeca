@@ -14,7 +14,7 @@
       </ion-row> 
   </ion-toolbar>
 
-  <ion-row  *ngFor="let barbeiro of barbeiros; let ix = index">
+  <ion-row  *ngFor="let barbeiro of listaFuncionario; let ix = index">
     <ion-col>
       <ion-row>
         <ion-button type="submit" (click)="barbeiroSelec(); pushPage(barbeiro)">{{ barbeiro.titulo }}</ion-button>
