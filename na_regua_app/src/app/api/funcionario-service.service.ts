@@ -11,11 +11,12 @@ export class FuncionarioServiceService {
 
 
   public getAllDados(){
+    console.log(   'Fez chamado'  )
     return new Promise((ret) => {
 
       // requisição GET
       this.http.get(this.host).subscribe(dados => {
-
+        console.log(   dados  )
         ret(dados);
 
       });
@@ -41,7 +42,7 @@ export class FuncionarioServiceService {
   }
 
 
-  /* Cadastra um cliente*/
+  /* Cadastra um funcionario*/
   public putDados(obj: any){
     return new Promise((ret) => {
       

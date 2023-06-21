@@ -16,38 +16,45 @@ export class HomePage implements OnInit {
     {id:'3',titulo:'Sobrancelha R$ 20.00', adicionado: false }
   ];
 
-  public horarios ={
-    id: '',
-    titulo: '',
-    adicionado: false
-  };
-  
+
   public itensAdc:any = []
 
   public barbeariaLogo=[ {imagem:'img01.jpg'} ];
  
   public barberImg = '../../assets/imagens/';
- 
-  public segment = '1';
-  
-  public categoria = [
-    { id: '1', home: this.items },
-    { id: '2', home: this.horarios}  
-  ]
 
-  public barbeiro = {
+  public segment = '1';
+
+  public cliente ="";
+
+  public horarios ={
+    id: '',
+    titulo: '',
+    adicionado: false
+  };
+    public barbeiro = {
     id: '',
     titulo: '',
     adicionado: false
     };
+    
+  public categoria = [
+    { id: '1', home: this.items },
+    { id: '2', home: this.horarios}  
+  ]
+  
 
-  constructor(public navCtrl: NavController, private  route: ActivatedRoute) {  
+
+  constructor(public navCtrl: NavController, private  route: ActivatedRoute) {
+      
     this.route.queryParams.subscribe(params => {
-      this.barbeiro = params['barbeiro'];
+      this.cliente = params['nome'];
       this.horarios = params['items'];
+      this.barbeiro = params['barbeiro'];
   });
- 
+     
   }
+  
 
   addItem(item:any){
     item.adicionado = true;
@@ -61,7 +68,9 @@ export class HomePage implements OnInit {
   }
 
   pushPage(){
+
     this.navCtrl.navigateForward('selec-barb', {
+      queryParams: { cliente: this.cliente}
     });
   }
   

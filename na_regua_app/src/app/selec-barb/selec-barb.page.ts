@@ -22,6 +22,8 @@ export class SelecBarbPage implements OnInit {
     adicionado: false
   };
 
+  public cliente="";
+
   FuncionarioServiceService: any;
   listaFuncionario: any[] = []
 
@@ -30,10 +32,15 @@ export class SelecBarbPage implements OnInit {
     public navCtrl: NavController) {
     this.route.queryParams.subscribe(params => {
     this.barbeiro = params['barbeiro'];
+    this.cliente = params['nome'];
+
     });
+
+    this.barbeiroSelec();
   }
 
  async barbeiroSelec() {
+  console.log(   'iniciou chamado'  )
   this.service.getAllDados().then((funcionario: any) => {
     this.listaFuncionario = funcionario;
   });;
@@ -43,7 +50,7 @@ export class SelecBarbPage implements OnInit {
   
   pushPage(barbeiro: any){
     this.navCtrl.navigateForward('agen-barber', {
-    queryParams: { barbeiro: barbeiro}
+    queryParams: { barbeiro: barbeiro, cliente: this.cliente}
     });
   }
   ngOnInit() {

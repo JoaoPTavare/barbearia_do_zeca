@@ -20,7 +20,6 @@ export class CadastroPage implements OnInit {
   constructor(   private navCtrl: NavController,
     private formBuilder: FormBuilder,
     private service: ClienteServiceService,
-    private toastController: ToastController,
     private alertController: AlertController,
     
 ) {
@@ -67,14 +66,12 @@ export class CadastroPage implements OnInit {
 
 }
 
- 
-public barbeiro = {
-  id: '',
-  titulo: '',
-  adicionado: false
-};
+pushPage(){
 
- 
+  this.navCtrl.navigateForward('home', {
+    queryParams: { cliente: this.nome}
+  });
+}
 
 }
 

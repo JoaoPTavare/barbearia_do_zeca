@@ -7,6 +7,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
  
 
   export class ClienteServiceService {
+    postAgendamento(Agendamento: any) {
+      throw new Error('Method not implemented.');
+    }
     constructor(private http: HttpClient) {}
   
     private host = 'http://localhost:8080/apiClientes';

@@ -12,21 +12,21 @@ import { ActivatedRoute, } from '@angular/router';
 })
 export class AgenBarberPage implements OnInit {
 
-  cliente: FormControl | undefined;
-  funcionario: FormControl | undefined;
-  tempo: FormControl | undefined;
-  data: FormControl | undefined;
- 
+
+  public barbeiro =  "";
+  public cliente =  "";
+  public data =  "";
+  public tempo =  "";
  
 
  
-  formulario: FormGroup;
-  ClienteServiceService: any;
+  formulario={};
   AgendamentoServiceService: any;
+ 
 
   constructor( private navCtrl: NavController,
     private formBuilder: FormBuilder,
-    private service: ClienteServiceService,
+    private service: AgendamentoServiceService,
     private toastController: ToastController,
     private alertController: AlertController,
     private route: ActivatedRoute
@@ -34,47 +34,42 @@ export class AgenBarberPage implements OnInit {
 ) {
    
     this.route.queryParams.subscribe(params => {
-    this.barbeiro = params['funcionario'];
-  });
+      this.cliente = params['cliente'];
+    this.barbeiro = params['barbeiro'];
 
-    this.formulario = this.formBuilder.group({
-      cliente: this.cliente,
-      funcionario: this.funcionario,
-      tempo: this.tempo,
-      data: this.data,
-    });
+  
+  });
  }
 
- public barbeiro = {
-  id: '',
-  titulo: '',
-  adicionado: false
-};
+
 
   async pushPage(funcionario:any){
-  this.navCtrl.navigateForward('home', {
-    queryParams: { funcionario: funcionario}
-  });
-}
+    console.log('frazinha')
+    this.cadastrar();
+
+  this.navCtrl.navigateForward('home');
+  } 
 
   ngOnInit() {}
 
   async cadastrar() {
-    const cliente = this.formulario.value.cliente;
-    const funcionario = this.formulario.value.funcionario;
-    const data = this.formulario.value.data;
-    const tempo = this.formulario.value.tempo;
+
+    const cliente = this.cliente;
+    const barbeiro = this.barbeiro;
+    const data = this.data;
+    const tempo = this.tempo;
   
     const Agendamento: any = {
       
       id: 0,
       cliente: cliente,
-      funcionario: funcionario,
+      funcionario: barbeiro,
       data: data,
       tempo: tempo,
     };
 
-    // this.service.postAgendamento(Agendamento);
+   this.service.postAgendamento(Agendamento);
 
   }
+  
 }
