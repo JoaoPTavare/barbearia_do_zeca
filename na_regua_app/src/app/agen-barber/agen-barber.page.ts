@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ClienteServiceService } from '../api/cliente-service.service';
+ 
 import { AlertController, NavController, ToastController } from '@ionic/angular';
+import { AgendamentoServiceService } from '../api/agendamento-service.service';
 
 @Component({
   selector: 'app-agen-barber',
@@ -14,17 +15,17 @@ export class AgenBarberPage implements OnInit {
   funcionario: FormControl | undefined;
   tempo: FormControl | undefined;
   data: FormControl | undefined;
- 
+  barbeiro: FormControl | undefined;
  
  
  
  
   formulario: FormGroup;
-  ClienteServiceService: any;
+  AgendamentoServiceService: any;
 
   constructor(   private navCtrl: NavController,
     private formBuilder: FormBuilder,
-    private service: ClienteServiceService,
+    private service: AgendamentoServiceService,
     private toastController: ToastController,
     private alertController: AlertController,
 ) {

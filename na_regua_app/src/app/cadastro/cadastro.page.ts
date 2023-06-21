@@ -22,6 +22,7 @@ export class CadastroPage implements OnInit {
     private service: ClienteServiceService,
     private toastController: ToastController,
     private alertController: AlertController,
+    
 ) {
    
     this.nome = new FormControl('', Validators.required);
@@ -65,4 +66,15 @@ export class CadastroPage implements OnInit {
 
 
 }
+
+ 
+public barbeiro = {
+  id: '',
+  titulo: '',
+  adicionado: false
+};
+
+ 
+
 }
+

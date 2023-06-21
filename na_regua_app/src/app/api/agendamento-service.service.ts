@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpHeaders,HttpClient  } from '@angular/common/http';
+
+ 
 
 @Injectable({
   providedIn: 'root'
@@ -7,10 +9,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class AgendamentoServiceService {
 
 
+ 
+constructor(private http: HttpClient) {}
+
 
 private host = "http://localhost:8080/apiAgendamento";
-  http: any;
-
 
 
 public postAgendamento(obj: any) {
@@ -20,7 +23,7 @@ public postAgendamento(obj: any) {
 
     this.http
       .post(this.host, obj, { headers: headers })
-      .subscribe((Agendamento: any) => {
+      .subscribe((Agendamento) => {
         ret(Agendamento);
       });
   });
@@ -37,15 +40,15 @@ public getAllAgendamento() {
 
 public getAgendamentoById(id: number) {
   return new Promise((ret) => {
-    this.http.get(this.host + '{' + id + '}').subscribe((Agendamento: any) => {
+    this.http.get(this.host + '{' + id + '}').subscribe((Agendamento) => {
       ret(Agendamento);
     });
   });
 }
 
-public deleteCliente(id: number) {
+public deleteAgendamento(id: number) {
   return new Promise<void>((resolve) => {
-    this.http.delete(this.host + '/' + id).subscribe((Agendamento: any) => {
+    this.http.delete(this.host + '/' + id).subscribe((dados) => {
       resolve();
     });
   });
