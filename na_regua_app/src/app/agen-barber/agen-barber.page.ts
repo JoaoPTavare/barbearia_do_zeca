@@ -1,7 +1,9 @@
+import { AgendamentoServiceService } from './../api/agendamento-service.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ClienteServiceService } from '../api/cliente-service.service';
 import { AlertController, NavController, ToastController } from '@ionic/angular';
+import { ActivatedRoute, } from '@angular/router';
 
 @Component({
   selector: 'app-agen-barber',
@@ -16,20 +18,24 @@ export class AgenBarberPage implements OnInit {
   data: FormControl | undefined;
  
  
- 
- 
+
  
   formulario: FormGroup;
   ClienteServiceService: any;
+  AgendamentoServiceService: any;
 
-  constructor(   private navCtrl: NavController,
+  constructor( private navCtrl: NavController,
     private formBuilder: FormBuilder,
     private service: ClienteServiceService,
     private toastController: ToastController,
     private alertController: AlertController,
+    private route: ActivatedRoute
+  
 ) {
    
- 
+    this.route.queryParams.subscribe(params => {
+    this.barbeiro = params['barbeiro'];
+  });
 
     this.formulario = this.formBuilder.group({
       cliente: this.cliente,
@@ -38,6 +44,18 @@ export class AgenBarberPage implements OnInit {
       data: this.data,
     });
  }
+
+ public barbeiro = {
+  id: '',
+  titulo: '',
+  adicionado: false
+};
+
+  async pushPage(funcionario:any){
+  this.navCtrl.navigateForward('home', {
+    queryParams: { funcionario: funcionario}
+  });
+}
 
   ngOnInit() {}
 
@@ -56,7 +74,7 @@ export class AgenBarberPage implements OnInit {
       tempo: tempo,
     };
 
-    this.service.postAgendamento(Agendamento);
+    // this.service.postAgendamento(Agendamento);
 
   }
 }
